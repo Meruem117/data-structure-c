@@ -1,6 +1,9 @@
 #include <iostream>
+#include "include/list.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    SeqList seqList{};
+    initSeqList(seqList);
+    printSeqList(seqList);
     return 0;
 }
