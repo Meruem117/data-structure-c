@@ -32,7 +32,5 @@
 *.app
 
 .idea
-base
-func
 cmake-build-debug
 CMakeLists.txt

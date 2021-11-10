@@ -22,6 +22,13 @@ void initSeqList(SeqList &list) {
     list.length = 0;
 }
 
+void setSeqList(SeqList &list) {
+    for (int &i: list.data) {
+        cin >> i;
+    }
+    list.length = MAX_SIZE;
+}
+
 void printSeqList(SeqList list) {
     if (list.length == 0) {
         cout << "empty" << endl;
