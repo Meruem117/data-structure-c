@@ -8,6 +8,6 @@ int main() {
     SeqList seqList{};
     initDefaultSeqList(seqList);
     printSeqList(seqList);
-    cout << binSearch(seqList, 11) << endl;
+    cout << seqSearch(seqList, 1) << endl;
     return 0;
 }
