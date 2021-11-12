@@ -9,9 +9,9 @@
 
 using namespace std;
 
-#define MAX_SIZE 10
+#define LIST_SIZE 10
 struct SeqList {
-    int data[MAX_SIZE];
+    int data[LIST_SIZE];
     int length;
 };
 
@@ -22,11 +22,18 @@ void initSeqList(SeqList &list) {
     list.length = 0;
 }
 
+void initDefaultSeqList(SeqList &list) {
+    for (int i = 0; i < LIST_SIZE; i++) {
+        list.data[i] = i;
+    }
+    list.length = LIST_SIZE;
+}
+
 void setSeqList(SeqList &list) {
     for (int &i: list.data) {
         cin >> i;
     }
-    list.length = MAX_SIZE;
+    list.length = LIST_SIZE;
 }
 
 void printSeqList(SeqList list) {
@@ -36,6 +43,7 @@ void printSeqList(SeqList list) {
     for (int i = 0; i < list.length; i++) {
         cout << list.data[i] << ' ';
     }
+    cout << endl;
 }
 
 #endif //DATA_STRUCTURE_C_LIST_H
