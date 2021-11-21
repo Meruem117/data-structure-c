@@ -1,19 +1,8 @@
 //
-// Created by Meruem on 2021/11/10.
+// Created by Meruem on 2021/11/21.
 //
 
-#ifndef DATA_STRUCTURE_C_LIST_H
-#define DATA_STRUCTURE_C_LIST_H
-
-#include "iostream"
-
-using namespace std;
-
-#define LIST_SIZE 10
-struct SeqList {
-    int data[LIST_SIZE];
-    int length;
-};
+#include "list.h"
 
 void initSeqList(SeqList &list) {
     for (int &i: list.data) {
@@ -45,5 +34,3 @@ void printSeqList(SeqList list) {
     }
     cout << endl;
 }
-
-#endif //DATA_STRUCTURE_C_LIST_H

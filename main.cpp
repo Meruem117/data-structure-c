@@ -1,6 +1,6 @@
 #include <iostream>
-#include "include/list.h"
-#include "include/search.h"
+#include "src/list.h"
+#include "src/search.h"
 
 using namespace std;
 

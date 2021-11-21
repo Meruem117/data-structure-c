@@ -1,11 +1,8 @@
 //
-// Created by Meruem on 2021/11/12.
+// Created by Meruem on 2021/11/21.
 //
 
-#ifndef DATA_STRUCTURE_C_SEARCH_H
-#define DATA_STRUCTURE_C_SEARCH_H
-
-#include "list.h"
+#include "search.h"
 
 int seqSearch(SeqList list, int key) {
     for (int i = 0; i < list.length; i++) {
@@ -37,5 +34,3 @@ int binSearch(SeqList list, int key) {
     }
     return -1;
 }
-
-#endif //DATA_STRUCTURE_C_SEARCH_H
