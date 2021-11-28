@@ -9,7 +9,7 @@
 
 int seqSearch(SeqList list, int key);
 
-int seqSearchWithSentry(SeqList list, int key);
+int seqSearchWithSentry(SeqList2 list, int key);
 
 int binSearch(SeqList list, int key);
 

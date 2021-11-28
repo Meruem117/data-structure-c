@@ -13,7 +13,7 @@ int seqSearch(SeqList list, int key) {
     return -1;
 }
 
-int seqSearchWithSentry(SeqList list, int key) {
+int seqSearchWithSentry(SeqList2 list, int key) {
     int i;
     list.data[0] = key;
     for (i = list.length; list.data[i] != key; i--);
