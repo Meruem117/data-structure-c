@@ -3,13 +3,7 @@
 //
 
 #include "sort.h"
-
-void printArray(int a[], int len) {
-    for (int i = 0; i < len; i++) {
-        cout << a[i] << ' ';
-    }
-    cout << endl;
-}
+#include "utils.h"
 
 void insertSort(int a[], int len) {
     int i, j, tmp;
