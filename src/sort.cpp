@@ -83,3 +83,34 @@ void selectSort(int a[], int len) {
     }
     printArray(a, len, false);
 }
+
+void headAdjust(int a[], int k, int len) {
+    a[0] = a[k];
+    for (int i = k * 2; i <= len; i *= 2) {
+        if (i < len && a[i] < a[i + 1]) {
+            i++;
+        }
+        if (a[0] >= a[i]) {
+            break;
+        } else {
+            a[k] = a[i];
+            k = i;
+        }
+    }
+    a[k] = a[0];
+}
+
+void buildMaxHeap(int a[], int len) {
+    for (int i = len / 2; i > 0; i--) {
+        headAdjust(a, i, len);
+    }
+}
+
+void heapSort(int a[], int len) {
+    buildMaxHeap(a, len);
+    for (int i = len; i > 1; i--) {
+        swap(a[i], a[1]);
+        headAdjust(a, 1, i - 1);
+    }
+    printArray(a, len, true);
+}

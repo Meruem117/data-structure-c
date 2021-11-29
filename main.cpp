@@ -21,6 +21,7 @@ void testSort() {
     bubbleSort(a, 10);
 //    quickSort(a, 0, 9);
     selectSort(a, 10);
+    heapSort(b, 9);
 }
 
 int main() {
