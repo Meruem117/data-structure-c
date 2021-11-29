@@ -7,20 +7,11 @@ using namespace std;
 
 void testSearch() {
     int a[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-    int key = 5;
-    List list{};
-    List listWithHead{};
+    int key = 6;
 
-    initList(list);
-    setList(list, a, 10);
-    printList(list, false);
-    initList(listWithHead);
-    setList(listWithHead, a, 9);
-    printList(listWithHead, true);
-
-    cout << seqSearch(list, key) << endl;
-    cout << seqSearchWithSentry(listWithHead, key) << endl;
-    cout << binSearch(list, key) << endl;
+    cout << seqSearch(a, 10, key) << endl;
+    cout << binSearch(a, 10, key) << endl;
+    cout << seqSearchWithSentry(a, 9, key) << endl;
 }
 
 void testSort() {
@@ -29,6 +20,7 @@ void testSort() {
 }
 
 int main() {
+    testSearch();
     testSort();
     return 0;
 }

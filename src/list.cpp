@@ -14,19 +14,13 @@ void setList(List &list, int *data, int length) {
     list.length = length;
 }
 
-void printList(List list, bool hasHead) {
+void printList(List list) {
     if (list.length == 0) {
         cout << "empty list" << endl;
-        return;
-    }
-    if (hasHead) {
-        for (int i = 0; i <= list.length; i++) {
-            cout << list.data[i] << ' ';
-        }
     } else {
         for (int i = 0; i < list.length; i++) {
             cout << list.data[i] << ' ';
         }
+        cout << endl;
     }
-    cout << endl;
 }

@@ -5,12 +5,10 @@
 #ifndef DATA_STRUCTURE_C_SEARCH_H
 #define DATA_STRUCTURE_C_SEARCH_H
 
-#include "list.h"
+int seqSearch(int a[], int len, int key);
 
-int seqSearch(List list, int key);
+int seqSearchWithSentry(int a[], int len, int key);
 
-int seqSearchWithSentry(List list, int key);
-
-int binSearch(List list, int key);
+int binSearch(int a[], int len, int key);
 
 #endif //DATA_STRUCTURE_C_SEARCH_H
