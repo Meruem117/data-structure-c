@@ -11,4 +11,6 @@ void shellSort(int a[], int len);
 
 void bubbleSort(int a[], int len);
 
+void quickSort(int a[], int low, int high);
+
 #endif //DATA_STRUCTURE_C_SORT_H

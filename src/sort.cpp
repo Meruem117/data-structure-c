@@ -35,12 +35,6 @@ void shellSort(int a[], int len) {
     printArray(a, len, true);
 }
 
-void swap(int &a, int &b) {
-    int tmp = a;
-    a = b;
-    b = tmp;
-}
-
 void bubbleSort(int a[], int len) {
     for (int i = 0; i < len - 1; i++) {
         bool flag = false;
@@ -53,4 +47,24 @@ void bubbleSort(int a[], int len) {
         if (!flag) break;
     }
     printArray(a, len, false);
+}
+
+int partition(int a[], int low, int high) {
+    int p = a[low];
+    while (low < high) {
+        while (low < high && a[high] >= p) high--;
+        a[low] = a[high];
+        while (low < high && a[low] <= p) low++;
+        a[high] = a[low];
+    }
+    a[low] = p;
+    return low;
+}
+
+void quickSort(int a[], int low, int high) {
+    if (low < high) {
+        int p = partition(a, low, high);
+        quickSort(a, low, p - 1);
+        quickSort(a, p + 1, high);
+    }
 }

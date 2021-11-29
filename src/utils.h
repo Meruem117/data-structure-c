@@ -11,4 +11,6 @@ using namespace std;
 
 void printArray(int a[], int len, bool hasHead);
 
+void swap(int &a, int &b);
+
 #endif //DATA_STRUCTURE_C_UTILS_H
