@@ -19,7 +19,8 @@ void testSort() {
     insertSort(a, 10);
     shellSort(b, 9);
     bubbleSort(a, 10);
-    quickSort(a, 0, 9);
+//    quickSort(a, 0, 9);
+    selectSort(a, 10);
 }
 
 int main() {

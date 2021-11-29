@@ -68,3 +68,18 @@ void quickSort(int a[], int low, int high) {
         quickSort(a, p + 1, high);
     }
 }
+
+void selectSort(int a[], int len) {
+    for (int i = 0; i < len - 1; i++) {
+        int min = i;
+        for (int j = i + 1; j < len; j++) {
+            if (a[j] < a[min]) {
+                min = j;
+            }
+        }
+        if (min != i) {
+            swap(a[i], a[min]);
+        }
+    }
+    printArray(a, len, false);
+}
