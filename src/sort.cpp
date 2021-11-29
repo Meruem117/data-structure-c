@@ -16,5 +16,21 @@ void insertSort(int a[], int len) {
             a[j + 1] = tmp;
         }
     }
-    printArray(a, len);
+    printArray(a, len, false);
+}
+
+void shellSort(int a[], int len) {
+    int d, i, j;
+    for (d = len / 2; d >= 1; d /= 2) {
+        for (i = d + 1; i <= len; i++) {
+            if (a[i] < a[i - d]) {
+                a[0] = a[i];
+                for (j = i - d; j > 0 && a[0] < a[j]; j -= d) {
+                    a[j + d] = a[j];
+                }
+                a[j + d] = a[0];
+            }
+        }
+    }
+    printArray(a, len, true);
 }

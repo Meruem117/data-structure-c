@@ -7,4 +7,6 @@
 
 void insertSort(int a[], int len);
 
+void shellSort(int a[], int len);
+
 #endif //DATA_STRUCTURE_C_SORT_H

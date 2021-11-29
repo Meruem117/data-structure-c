@@ -9,6 +9,6 @@
 
 using namespace std;
 
-void printArray(int a[], int len);
+void printArray(int a[], int len, bool hasHead);
 
 #endif //DATA_STRUCTURE_C_UTILS_H
