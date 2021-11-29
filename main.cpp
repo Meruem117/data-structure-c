@@ -15,8 +15,10 @@ void testSearch() {
 void testSort() {
     int a[10] = {2, 1, 3, 4, 5, 0, 6, 8, 9, 7};
     int b[10] = {0, 1, 3, 4, 5, 2, 6, 8, 9, 7};
+
     insertSort(a, 10);
     shellSort(b, 9);
+    bubbleSort(a, 10);
 }
 
 int main() {

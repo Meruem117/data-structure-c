@@ -34,3 +34,23 @@ void shellSort(int a[], int len) {
     }
     printArray(a, len, true);
 }
+
+void swap(int &a, int &b) {
+    int tmp = a;
+    a = b;
+    b = tmp;
+}
+
+void bubbleSort(int a[], int len) {
+    for (int i = 0; i < len - 1; i++) {
+        bool flag = false;
+        for (int j = len - 1; j > i; j--) {
+            if (a[j] < a[j - 1]) {
+                swap(a[j], a[j - 1]);
+                flag = true;
+            }
+        }
+        if (!flag) break;
+    }
+    printArray(a, len, false);
+}
