@@ -114,3 +114,29 @@ void heapSort(int a[], int len) {
     }
     printArray(a, len, true);
 }
+
+void merge(int a[], int low, int mid, int high, int b[]) {
+    int i, j, k;
+    for (k = low; k <= high; k++) {
+        b[k] = a[k];
+    }
+    for (i = low, j = mid + 1, k = i; i <= mid && j <= high; k++) {
+        if (b[i] <= b[j]) {
+            a[k] = b[i++];
+        } else {
+            a[k] = b[j++];
+        }
+    }
+    while (i <= mid) a[k++] = b[i++];
+    while (j <= high) a[k++] = b[j++];
+}
+
+void mergeSort(int a[], int low, int high, int len) {
+    int *b = (int *) malloc(len * sizeof(int));
+    if (low < high) {
+        int mid = (low + high) / 2;
+        mergeSort(a, low, mid, len);
+        mergeSort(a, mid + 1, high, len);
+        merge(a, low, mid, high, b);
+    }
+}

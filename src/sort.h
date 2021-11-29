@@ -17,4 +17,6 @@ void selectSort(int a[], int len);
 
 void heapSort(int a[], int len);
 
+void mergeSort(int a[], int low, int high, int len);
+
 #endif //DATA_STRUCTURE_C_SORT_H
