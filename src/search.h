@@ -7,10 +7,10 @@
 
 #include "list.h"
 
-int seqSearch(SeqList list, int key);
+int seqSearch(List list, int key);
 
-int seqSearchWithSentry(SeqList2 list, int key);
+int seqSearchWithSentry(List list, int key);
 
-int binSearch(SeqList list, int key);
+int binSearch(List list, int key);
 
 #endif //DATA_STRUCTURE_C_SEARCH_H

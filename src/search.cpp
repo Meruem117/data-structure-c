@@ -4,7 +4,7 @@
 
 #include "search.h"
 
-int seqSearch(SeqList list, int key) {
+int seqSearch(List list, int key) {
     for (int i = 0; i < list.length; i++) {
         if (list.data[i] == key) {
             return i;
@@ -13,14 +13,14 @@ int seqSearch(SeqList list, int key) {
     return -1;
 }
 
-int seqSearchWithSentry(SeqList2 list, int key) {
+int seqSearchWithSentry(List list, int key) {
     int i;
     list.data[0] = key;
     for (i = list.length; list.data[i] != key; i--);
     return i;
 }
 
-int binSearch(SeqList list, int key) {
+int binSearch(List list, int key) {
     int low = 0, high = list.length - 1, mid;
     while (low <= high) {
         mid = (low + high) / 2;

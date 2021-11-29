@@ -5,17 +5,19 @@
 using namespace std;
 
 int main() {
+    int a[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
     int key = 5;
-    SeqList seqList{};
-    SeqList2 seqList2{};
+    List list{};
+    List list1{};
 
-    initDefaultSeqList(seqList);
-    printSeqList(seqList);
-    initDefaultSeqList2(seqList2);
-    printSeqList2(seqList2);
+    setList(list, a, 10);
+    printList(list);
+    setList(list1, a, 9);
+    printList(list1);
 
-    cout << seqSearch(seqList, key) << endl;
-    cout << binSearch(seqList, key) << endl;
-    cout << seqSearchWithSentry(seqList2, key) << endl;
+    cout << seqSearch(list, key) << endl;
+    cout << seqSearchWithSentry(list1, key) << endl;
+    cout << binSearch(list, key) << endl;
+
     return 0;
 }
