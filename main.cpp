@@ -25,13 +25,8 @@ void testSort() {
     heapSort(b, 9);
 }
 
-void testSet() {
-
-}
-
 int main() {
 //    testSearch();
 //    testSort();
-    testSet();
     return 0;
 }

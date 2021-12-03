@@ -5,11 +5,7 @@
 #ifndef DATA_STRUCTURE_C_SET_H
 #define DATA_STRUCTURE_C_SET_H
 
-#define SIZE 13
-
-int Set[SIZE];
-
-void initSet(int S[]);
+void initSet(int S[], int size);
 
 int findSet(int S[], int x);
 

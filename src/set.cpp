@@ -4,8 +4,8 @@
 
 #include "set.h"
 
-void initSet(int S[]) {
-    for (int i = 0; i < SIZE; i++) {
+void initSet(int S[], int size) {
+    for (int i = 0; i < size; i++) {
         S[i] = -1;
     }
 }
