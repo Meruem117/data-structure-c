@@ -3,6 +3,9 @@
 //
 
 #include "list.h"
+#include "iostream"
+
+using namespace std;
 
 void initList(List &list) {
     list.data = {};

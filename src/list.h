@@ -5,10 +5,6 @@
 #ifndef DATA_STRUCTURE_C_LIST_H
 #define DATA_STRUCTURE_C_LIST_H
 
-#include "iostream"
-
-using namespace std;
-
 struct List {
     int *data;
     int length;

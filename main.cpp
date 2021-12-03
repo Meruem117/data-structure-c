@@ -1,7 +1,8 @@
 #include <iostream>
-#include "src/list.h"
 #include "src/search.h"
 #include "src/sort.h"
+#include "src/list.h"
+#include "src/set.h"
 
 void testSearch() {
     int a[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
@@ -19,13 +20,18 @@ void testSort() {
     insertSort(a, 10);
     shellSort(b, 9);
     bubbleSort(a, 10);
-//    quickSort(a, 0, 9);
+    quickSort(a, 0, 9);
     selectSort(a, 10);
     heapSort(b, 9);
 }
 
+void testSet() {
+
+}
+
 int main() {
 //    testSearch();
-    testSort();
+//    testSort();
+    testSet();
     return 0;
 }
