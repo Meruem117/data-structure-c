@@ -3,9 +3,6 @@
 //
 
 #include "set.h"
-#include "iostream"
-
-using namespace std;
 
 void initSet(int S[], int size) {
     for (int i = 0; i < size; i++) {
@@ -14,10 +11,16 @@ void initSet(int S[], int size) {
 }
 
 int findSet(int S[], int x) {
-    while (S[x] >= 0) {
-        x = S[x];
+    int root = x;
+    while (S[root] >= 0) {
+        root = S[root];
     }
-    return x;
+    while (x != root) {
+        int t = S[x];
+        S[x] = root;
+        x = t;
+    }
+    return root;
 }
 
 void unionSet(int S[], int root1, int root2) {
