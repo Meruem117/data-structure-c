@@ -3,6 +3,9 @@
 //
 
 #include "set.h"
+#include "iostream"
+
+using namespace std;
 
 void initSet(int S[], int size) {
     for (int i = 0; i < size; i++) {
@@ -28,4 +31,46 @@ void unionSet(int S[], int root1, int root2) {
         S[root2] += S[root1];
         S[root1] = root2;
     }
+}
+
+int componentCount(int G[5][5]) {
+    int S[5];
+    initSet(S, 5);
+    for (int i = 0; i < 5; i++) {
+        for (int j = i + 1; j < 5; j++) {
+            if (G[i][j] > 0) {
+                int iRoot = findSet(S, i);
+                int jRoot = findSet(S, j);
+                if (iRoot != jRoot) {
+                    unionSet(S, iRoot, jRoot);
+                }
+            }
+        }
+    }
+    int count = 0;
+    for (int i: S) {
+        if (i < 0) {
+            count++;
+        }
+    }
+    return count;
+}
+
+int hasAcyclic(int G[5][5]) {
+    int S[5];
+    initSet(S, 5);
+    for (int i = 0; i < 5; i++) {
+        for (int j = i + 1; j < 5; j++) {
+            if (G[i][j] > 0) {
+                int iRoot = findSet(S, i);
+                int jRoot = findSet(S, j);
+                if (iRoot != jRoot) {
+                    unionSet(S, iRoot, jRoot);
+                } else {
+                    return 1;
+                }
+            }
+        }
+    }
+    return 0;
 }
