@@ -17,9 +17,15 @@ int findSet(int S[], int x) {
     return x;
 }
 
-void unionSet(int S[], int roo1, int root2) {
-    if (roo1 == root2) {
+void unionSet(int S[], int root1, int root2) {
+    if (root1 == root2) {
         return;
     }
-    S[root2] = roo1;
+    if (S[root2] > S[root1]) {
+        S[root1] += S[root2];
+        S[root2] = root1;
+    } else {
+        S[root2] += S[root1];
+        S[root1] = root2;
+    }
 }
